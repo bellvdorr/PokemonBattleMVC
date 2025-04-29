@@ -9,5 +9,13 @@ def introproc():
 def exibeDadosPokemons(n_escolhido):
     for pokemon in pokemons:
         if n_escolhido == pokemon.get("n_pokedex"):
-            return print("Seu pokemon escolhido foi o", pokemon['nome'], "!")
-
+            print("Seu pokemon escolhido foi o", pokemon['nome'], "!")
+            return verificaAtaquePokemon(pokemon)
+        
+def verificaAtaquePokemon(pokemonEscolhido):
+    print("Ataques do teu pokemon")
+    for n_ataque in pokemonEscolhido['ataques']:
+        for ataque in ataques:
+            if n_ataque == ataque['id_ataque']:
+                print(ataque['nome_ataque'])
+    return 

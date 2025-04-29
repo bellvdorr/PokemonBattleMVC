@@ -1,5 +1,4 @@
-from .constructor.introproc import introproc, exibeDadosPokemons
-
+from .constructor.introproc import introproc, exibeDadosPokemons, verificaAtaquePokemon
 
 def start() -> None:
 
@@ -8,10 +7,13 @@ def start() -> None:
         
         if command == '1':
             exibeDadosPokemons(1)
+
         elif command == '2':
             exibeDadosPokemons(2)
+
         elif command == '3':
             exibeDadosPokemons(3)
+
         elif command == '4':
             exit()
         else: 
