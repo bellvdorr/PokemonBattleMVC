@@ -1,5 +1,14 @@
 [
     {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "intropage",
         "importPath": "src.views.fview",
         "description": "src.views.fview",
@@ -8,6 +17,38 @@
         "documentation": {}
     },
     {
+        "label": "atkpage",
+        "importPath": "src.views.atkview",
+        "description": "src.views.atkview",
+        "isExtraImport": true,
+        "detail": "src.views.atkview",
+        "documentation": {}
+    },
+    {
+        "label": "pokemons",
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "isExtraImport": true,
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
+        "label": "ataques",
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "isExtraImport": true,
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
+        "label": "introproc",
+        "importPath": "src.main.constructor.introproc",
+        "description": "src.main.constructor.introproc",
+        "isExtraImport": true,
+        "detail": "src.main.constructor.introproc",
+        "documentation": {}
+    },
+    {
         "label": "start",
         "importPath": "src.main.handproc",
         "description": "src.main.handproc",
@@ -16,11 +57,74 @@
         "documentation": {}
     },
     {
+        "label": "pokemons_json",
+        "kind": 5,
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "peekOfCode": "pokemons_json = [\n    {\n        \"n_pokedex\": 1,\n        \"nome\": \"Charmander\",\n        \"vida\": 32,\n        \"ataques\": [1,3]\n    },\n    {\n        \"n_pokedex\": 2,\n        \"nome\": \"Bulbasaur\",",
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
+        "label": "ataques_json",
+        "kind": 5,
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "peekOfCode": "ataques_json = [\n    {\n        \"id_ataque\": 1,\n        \"nome_ataque\": \"Arranhão\",\n        \"dano_ataque\": 8\n    },\n    {\n        \"id_ataque\": 2 ,\n        \"nome_ataque\":\"Investida\",\n        \"dano_ataque\": 8",
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
+        "label": "pokemons",
+        "kind": 5,
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "peekOfCode": "pokemons = pokemons_json\nataques = ataques_json",
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
+        "label": "ataques",
+        "kind": 5,
+        "importPath": "src.datas.dados",
+        "description": "src.datas.dados",
+        "peekOfCode": "ataques = ataques_json",
+        "detail": "src.datas.dados",
+        "documentation": {}
+    },
+    {
         "label": "introproc",
         "kind": 2,
         "importPath": "src.main.constructor.introproc",
         "description": "src.main.constructor.introproc",
-        "peekOfCode": "def introproc():\n    command = intropage()\n    return command",
+        "peekOfCode": "def introproc():\n    command = intropage()\n    return command\ndef atkview():\n    command1 = atkpage()\n    return command1\ndef exibeDadosPokemons(n_escolhido):\n    for pokemon in pokemons:\n        if n_escolhido == pokemon.get(\"n_pokedex\"):\n            print(\"Seu pokemon escolhido foi o\", pokemon['nome'], \"!\")",
+        "detail": "src.main.constructor.introproc",
+        "documentation": {}
+    },
+    {
+        "label": "atkview",
+        "kind": 2,
+        "importPath": "src.main.constructor.introproc",
+        "description": "src.main.constructor.introproc",
+        "peekOfCode": "def atkview():\n    command1 = atkpage()\n    return command1\ndef exibeDadosPokemons(n_escolhido):\n    for pokemon in pokemons:\n        if n_escolhido == pokemon.get(\"n_pokedex\"):\n            print(\"Seu pokemon escolhido foi o\", pokemon['nome'], \"!\")\n            return verificaAtaquePokemon(pokemon)\ndef verificaAtaquePokemon(pokemonEscolhido):\n    print(\"Ataques do pokemon\")",
+        "detail": "src.main.constructor.introproc",
+        "documentation": {}
+    },
+    {
+        "label": "exibeDadosPokemons",
+        "kind": 2,
+        "importPath": "src.main.constructor.introproc",
+        "description": "src.main.constructor.introproc",
+        "peekOfCode": "def exibeDadosPokemons(n_escolhido):\n    for pokemon in pokemons:\n        if n_escolhido == pokemon.get(\"n_pokedex\"):\n            print(\"Seu pokemon escolhido foi o\", pokemon['nome'], \"!\")\n            return verificaAtaquePokemon(pokemon)\ndef verificaAtaquePokemon(pokemonEscolhido):\n    print(\"Ataques do pokemon\")\n    for n_ataque in pokemonEscolhido['ataques']:\n        for ataque in ataques:\n            if n_ataque == ataque['id_ataque']:",
+        "detail": "src.main.constructor.introproc",
+        "documentation": {}
+    },
+    {
+        "label": "verificaAtaquePokemon",
+        "kind": 2,
+        "importPath": "src.main.constructor.introproc",
+        "description": "src.main.constructor.introproc",
+        "peekOfCode": "def verificaAtaquePokemon(pokemonEscolhido):\n    print(\"Ataques do pokemon\")\n    for n_ataque in pokemonEscolhido['ataques']:\n        for ataque in ataques:\n            if n_ataque == ataque['id_ataque']:\n                print(ataque['nome_ataque'])\n    return",
         "detail": "src.main.constructor.introproc",
         "documentation": {}
     },
@@ -29,8 +133,17 @@
         "kind": 2,
         "importPath": "src.main.handproc",
         "description": "src.main.handproc",
-        "peekOfCode": "def start() -> None:\n    while True:\n        command = introproc()\n        if command == '1':\n            print('Chamander!')\n        elif command == '2':\n            print ('Bubasaur!')\n        elif command == '3':\n            print('Squirtle!')\n        elif command == '4':",
+        "peekOfCode": "def start() -> None:\n    while True:\n        command = introproc()\n        if command == '1':\n            exibeDadosPokemons(1)\n        elif command == '2':\n            exibeDadosPokemons(2)\n        elif command == '3':\n            exibeDadosPokemons(3)\n        elif command == '4':",
         "detail": "src.main.handproc",
+        "documentation": {}
+    },
+    {
+        "label": "atkpage",
+        "kind": 2,
+        "importPath": "src.views.atkview",
+        "description": "src.views.atkview",
+        "peekOfCode": "def atkpage():\n    atkmessage = '''\n    Ataques de 'pokemonnome'\n    *atknome - 1\n    *atknome - 2 \n    *Fugir - 3\n    '''\n    print(atkmessage)\n    command1 = input('Ataque: ')\n    return command1",
+        "detail": "src.views.atkview",
         "documentation": {}
     },
     {
@@ -38,7 +151,7 @@
         "kind": 2,
         "importPath": "src.views.fview",
         "description": "src.views.fview",
-        "peekOfCode": "def intropage():\n    message = '''\n        Primeiro Pokémon\n        *Charmander - 1\n        *Bubasaur - 2 \n        *Squirtle - 3\n    '''\n    print(message)\n    command = input('Comando: ')\n    return command",
+        "peekOfCode": "def intropage():\n    message = '''\n        Primeiro Pokémon\n        *Charmander - 1\n        *Bubasaur - 2 \n        *Squirtle - 3\n        *Sair - 4\n    '''\n    print(message)\n    command = input('Comando: ')",
         "detail": "src.views.fview",
         "documentation": {}
     }
