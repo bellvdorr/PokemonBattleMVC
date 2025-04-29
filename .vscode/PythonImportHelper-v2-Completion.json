@@ -1,0 +1,45 @@
+[
+    {
+        "label": "intropage",
+        "importPath": "src.views.fview",
+        "description": "src.views.fview",
+        "isExtraImport": true,
+        "detail": "src.views.fview",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "importPath": "src.main.handproc",
+        "description": "src.main.handproc",
+        "isExtraImport": true,
+        "detail": "src.main.handproc",
+        "documentation": {}
+    },
+    {
+        "label": "introproc",
+        "kind": 2,
+        "importPath": "src.main.constructor.introproc",
+        "description": "src.main.constructor.introproc",
+        "peekOfCode": "def introproc():\n    command = intropage()\n    return command",
+        "detail": "src.main.constructor.introproc",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 2,
+        "importPath": "src.main.handproc",
+        "description": "src.main.handproc",
+        "peekOfCode": "def start() -> None:\n    while True:\n        command = introproc()\n        if command == '1':\n            print('Chamander!')\n        elif command == '2':\n            print ('Bubasaur!')\n        elif command == '3':\n            print('Squirtle!')\n        elif command == '4':",
+        "detail": "src.main.handproc",
+        "documentation": {}
+    },
+    {
+        "label": "intropage",
+        "kind": 2,
+        "importPath": "src.views.fview",
+        "description": "src.views.fview",
+        "peekOfCode": "def intropage():\n    message = '''\n        Primeiro Pokémon\n        *Charmander - 1\n        *Bubasaur - 2 \n        *Squirtle - 3\n    '''\n    print(message)\n    command = input('Comando: ')\n    return command",
+        "detail": "src.views.fview",
+        "documentation": {}
+    }
+]
